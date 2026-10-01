@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A1 Computers | Computers, Laptops, Printers & CCTV</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #123c69;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #123c69;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 560px;
+            padding: 80px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #3b82b8, #63a9d6);
+        }
+
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 27px;
+            flex-wrap: wrap;
+        }
+
+        
+
+        /* Sections */
+        section {
+            padding: 30px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* Products */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            border: 1px solid #e2e2e2;
+            border-radius: 10px;
+            padding: 24px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .card .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* About */
+        .about {
+            background: #f7f9fc;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        /* Why Us */
+        .why-us {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-box {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .why-box .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .why-box h3 {
+            color: #123c69;
+            margin-bottom: 8px;
+        }
+
+        .why-box p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #123c69;
+            color: white;
+        }
+
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-box {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #0c2947;
+            color: #ddd;
+            text-align: center;
+            padding: 25px 6%;
+            font-size: 14px;
+        }
+
+        /* WhatsApp floating button */
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25d366;
+            color: white;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 28px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 2000;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-us {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards,
+            .why-us,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            scroll-margin-top: 100px;
+        }
+
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px 0 28px;
+        }
+
+        .hero-highlights span {
+            padding: 8px 14px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.10);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .hero-badge {
+                font-size: 11px;
+                padding: 7px 14px;
+            }
+
+            .hero-highlights {
+                gap: 7px;
+                margin: 18px 0 24px;
+            }
+
+            .hero-highlights span {
+                font-size: 12px;
+                padding: 7px 10px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-highlights {
+                gap: 5px;
+            }
+
+            .hero-highlights span {
+                padding: 7px 7px;
+                font-size: 11px;
+            }
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            A1 COMPUTERS
+            <span>Technology • Service • Solutions</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ESTABLISHED 1998
+            </div>
+
+            <h1>
+                Your Trusted
+                <span>Technology Partner</span>
+            </h1>
+
+            <p>
+                Computers, Laptops, Printers, CCTV, Audio Systems,
+                Home Cinema and Professional Repair Services.
+            </p>
+
+            <div class="hero-highlights">
+                <span>✓ Sales</span>
+                <span>✓ Service</span>
+                <span>✓ Installation</span>
+                <span>✓ B2B &amp; B2C</span>
+            </div>
+
+            <div class="buttons">
+                <a href="#products" class="btn-primary">
+                    Explore Products
+                </a>
+
+                <a href="https://wa.me/919461000888"
+                    class="btn-whatsapp"
+                target="_blank">
+                    WhatsApp Us
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section id="products">
+
+        <div class="section-title">
+            <h2>Our Products</h2>
+            <p>
+                Quality technology products for home, office and business.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Computers & Desktops</h3>
+                <p>
+                    Desktop computers, components and accessories
+                    for home and business requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💼</div>
+                <h3>Laptops</h3>
+                <p>
+                    New and refurbished laptops for different
+                    personal and professional requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖨️</div>
+                <h3>Printers</h3>
+                <p>
+                    Printers, printing solutions, accessories
+                    and consumables.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📹</div>
+                <h3>CCTV & Security</h3>
+                <p>
+                    CCTV cameras and security solutions for
+                    homes, offices and businesses.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔊</div>
+                <h3>Audio Systems</h3>
+                <p>
+                    Speakers, sound systems and audio products
+                    for entertainment and professional use.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎬</div>
+                <h3>Home Theater & Home Cinema</h3>
+                <p>
+                    Home cinema and entertainment solutions
+                    with professional installation support.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" class="about">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>
+                Professional sales, installation and repair support.
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <h3>Computer Repair</h3>
+                <p>
+                    Repair and service for desktop computers
+                    and related equipment.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Laptop Repair</h3>
+                <p>
+                    Laptop diagnosis, repair and maintenance.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖨️</div>
+                <h3>Printer Service</h3>
+                <p>
+                    Printer repair, maintenance and service.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎬</div>
+                <h3>Home Cinema Installation</h3>
+                <p>
+                    Professional home theater and home cinema
+                    installation solutions.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📹</div>
+                <h3>CCTV Installation</h3>
+                <p>
+                    CCTV installation, configuration and service.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧴</div>
+                <h3>Toner Refilling</h3>
+                <p>
+                    Toner refilling and printing-related support.
+                </p>
+            </div>
+           
+            
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About A1 Computers</h2>
+            <p>Serving customers since 1998</p>
+        </div>
+
+        <div class="about-content">
+
+            
+            <p>
+                A1 Computers was established in 1998 and has been
+                serving customers with a wide range of technology
+                products and services.
+            </p>
+
+            <p>
+                We deal in laptops, desktop computers, printers,
+                CCTV cameras, mobile accessories and computer spare parts.
+                We are also pioneers in Home Cinema Installation,
+                helping customers create better entertainment
+                experiences at home.
+            </p>
+
+            <p>
+                We serve both B2B and B2C customers with products
+                and services across IT, printing, security,
+                sound systems and mobility solutions.
+            </p>
+
+            <p>
+                We also deal in refurbished and used laptops, 
+                computers, printers and mobile phones.
+            </p>
+
+            <p>
+                Our in-house service facility provides repair and
+                service for laptops, printers, computers,
+                mobile phones and other electronic items.
+            </p>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us -->
+    <section>
+
+        <div class="section-title">
+            <h2>Why A1 Computers?</h2>
+            <p>Experience, products and service under one roof.</p>
+        </div>
+
+        <div class="why-us">
+
+            <div class="why-box">
+                <div class="icon">📅</div>
+                <h3>Since 1998</h3>
+                <p>
+                    Serving customers since 1998 with
+                    experience and trusted service.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <div class="icon">🏢</div>
+                <h3>B2B & B2C</h3>
+                <p>
+                    Solutions for businesses and individual customers.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <div class="icon">🔧</div>
+                <h3>In-House Service</h3>
+                <p>
+                    Repair and service facilities for multiple
+                    electronic products.
+                </p>
+            </div>
+
+            <div class="why-box">
+                <div class="icon">🎬</div>
+                <h3>Home Cinema</h3>
+                <p>
+                    Specialist home theater and home cinema
+                    installation solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <div class="section-title">
+            <h2>Contact<br>A1 Computers</h2>
+            <p>Visit us or contact us for your requirement.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-box">
+                <h3>Visit Our Showroom</h3>
+
+                
+                <p>
+                    <a href="https://share.google/scSmjKs4TSYaMifyW"
+                    target="_blank">
+                        28–29, Adarsh Nagar,<br>
+                        Radheyshyam Road,<br>
+                        Sri Ganganagar, Rajasthan – 335001
+                    </a>
+                </p>
+
+
+
+                <p>
+                    <strong>Business Hours</strong><br>
+                    Monday–Saturday: 9:30 AM – 8:30 PM<br>
+                    Sunday: Closed
+                </p>
+            </div>
+
+            <div class="contact-box">
+                <h3>Call or WhatsApp</h3>
+
+                <p>
+                    Phone:
+                    <a href="tel:+919461000888">
+                        9461000888
+                    </a>
+                </p>
+
+                <p>
+                    WhatsApp:
+                    <a href="https://wa.me/919461000888"
+                       target="_blank">
+                        Chat with us
+                    </a>
+                </p>
+
+                <p>
+                    Website:
+                    <a href="https://mehtamart.com" target="_blank">
+                        mehtamart.com
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 A1 Computers. All Rights Reserved.
+        </p>
+
+        <p>
+            A Proprietorship Business • Established in 1998
+        </p>
+
+    </footer>
+
+
+    <!-- Floating WhatsApp -->
+    <a class="whatsapp-float"
+       href="https://wa.me/919461000888"
+       target="_blank"
+       title="Chat on WhatsApp">
+        ☎
+    </a>
+
+</body>
+</html>
