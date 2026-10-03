@@ -114,10 +114,11 @@
 
         .card {
             border: 1px solid #e2e2e2;
-            border-radius: 10px;
-            padding: 24px;
+            border-radius: 12px;
+            padding: 26px 24px;
             background: #fff;
             transition: 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .card:hover {
@@ -126,13 +127,14 @@
         }
 
         .card .icon {
-            font-size: 38px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin-bottom: 18px;
         }
 
         .card h3 {
             color: #123c69;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            line-height: 1.3;
         }
 
         .card p {
@@ -363,6 +365,47 @@
             }
         }
 
+        .business-hours {
+            display: block;
+            margin-top: 8px;
+        }
+
+        .whatsapp-contact {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .whatsapp-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .whatsapp-icon svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
+        .phone-icon {
+            font-size: 20px;
+        }
+
+        .clock-icon {
+            font-size: 20px;
+        }
+
+        .location-icon {
+            font-size: 20px;
+        }
+
 
     </style>
 </head>
@@ -440,63 +483,142 @@
 
         <div class="cards">
 
-            <div class="card">
-                <div class="icon">💻</div>
+            <!-- Product 01: Computers & Desktops -->
+                <div class="card">
+                <div class="icon">🖥️</div>
                 <h3>Computers & Desktops</h3>
                 <p>
                     Desktop computers, components and accessories
-                    for home and business requirements.
+                    for home, office and business requirements.
                 </p>
             </div>
 
+
+            <!-- Product 02: Laptops -->
             <div class="card">
-                <div class="icon">💼</div>
+                <div class="icon">💻</div>
                 <h3>Laptops</h3>
                 <p>
-                    New and refurbished laptops for different
-                    personal and professional requirements.
+                    New laptops and computing solutions for
+                    personal, professional and business use.
                 </p>
             </div>
 
+
+            <!-- Product 03: Refurbished Computers & Laptops -->
+            <div class="card">
+                <div class="icon">♻️</div>
+                <h3>Refurbished Computers & Laptops</h3>
+                <p>
+                    Refurbished and used computers and laptops
+                    for value-conscious customers and businesses.
+                </p>
+            </div>
+
+
+            <!-- Product 04: Printers & Printing Solutions -->
             <div class="card">
                 <div class="icon">🖨️</div>
-                <h3>Printers</h3>
+                <h3>Printers & Printing Solutions</h3>
                 <p>
-                    Printers, printing solutions, accessories
-                    and consumables.
+                    Printers, printing accessories, consumables
+                    and printing solutions.
                 </p>
             </div>
 
+
+            <!-- Product 05: CCTV & Security Systems -->
             <div class="card">
                 <div class="icon">📹</div>
-                <h3>CCTV & Security</h3>
+                <h3>CCTV & Security Systems</h3>
                 <p>
                     CCTV cameras and security solutions for
-                    homes, offices and businesses.
+                    homes, offices, shops and businesses.
                 </p>
             </div>
 
+
+            <!-- Product 06: Speakers & Audio Systems -->
             <div class="card">
                 <div class="icon">🔊</div>
-                <h3>Audio Systems</h3>
+                <h3>Speakers & Audio Systems</h3>
                 <p>
                     Speakers, sound systems and audio products
                     for entertainment and professional use.
                 </p>
             </div>
 
+
+            <!-- Product 07: Home Cinema -->
             <div class="card">
                 <div class="icon">🎬</div>
-                <h3>Home Theater & Home Cinema</h3>
+                <h3>Home Cinema</h3>
                 <p>
-                    Home cinema and entertainment solutions
-                    with professional installation support.
+                    Home theater, home cinema and entertainment
+                    solutions with professional installation support.
+                </p>
+            </div>
+
+
+            <!-- Product 08: Monitors & Accessories -->
+            <div class="card">
+                <div class="icon">🖥️</div>
+                <h3>Monitors & Computer Accessories</h3>
+                <p>
+                    Monitors, keyboards, mice, cables and other
+                    computer accessories.
+                </p>
+            </div>
+
+
+            <!-- Product 09: Networking Products -->
+            <div class="card">
+                <div class="icon">🌐</div>
+                <h3>Networking Products</h3>
+                <p>
+                    Networking equipment and connectivity products
+                    for home, office and business use.
+                </p>
+            </div>
+
+
+            <!-- Product 10: UPS & Power Solutions -->
+            <div class="card">
+                <div class="icon">🔋</div>
+                <h3>UPS & Power Solutions</h3>
+                <p>
+                    UPS systems and power-related solutions
+                    for computers and office equipment.
+                </p>
+            </div>
+
+
+            <!-- Product 11: Mobile Accessories -->
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>Mobile Accessories</h3>
+                <p>
+                    Mobile cables, chargers, adapters and other
+                    useful mobile accessories.
+                </p>
+            </div>
+
+
+            <!-- Product 12: Refurbished Mobile Phones -->
+            <div class="card">
+                <div class="icon">♻️</div>
+                <h3>Refurbished Mobile Phones</h3>
+                <p>
+                    Selected refurbished and used mobile phones,
+                    subject to availability.
                 </p>
             </div>
 
         </div>
 
     </section>
+
+
 
 
     <!-- Services -->
@@ -669,6 +791,7 @@
 
 
     <!-- Contact -->
+    
     <section id="contact" class="contact">
 
         <div class="section-title">
@@ -679,49 +802,47 @@
         <div class="contact-grid">
 
             <div class="contact-box">
-                <h3>Visit Our Showroom</h3>
+                <h3><span class="location-icon">📍</span> Visit Our Showroom</h3>
 
-                
                 <p>
                     <a href="https://share.google/scSmjKs4TSYaMifyW"
-                    target="_blank">
+                        target="_blank">
                         28–29, Adarsh Nagar,<br>
                         Radheyshyam Road,<br>
                         Sri Ganganagar, Rajasthan – 335001
                     </a>
                 </p>
 
-
-
                 <p>
-                    <strong>Business Hours</strong><br>
-                    Monday–Saturday: 9:30 AM – 8:30 PM<br>
-                    Sunday: Closed
+                    <strong><span class="clock-icon">🕐</span> Business Hours</strong>
+
+                    <span class="business-hours">
+                        Monday–Saturday: 9:30 AM – 8:30 PM<br>
+                        Sunday: Closed
+                    </span>
                 </p>
             </div>
 
             <div class="contact-box">
-                <h3>Call or WhatsApp</h3>
+                <h3>📞 Call or WhatsApp</h3>
 
                 <p>
-                    Phone:
+                    <span class="phone-icon">📱</span>&nbsp;&nbsp;&nbsp;Phone:
                     <a href="tel:+919461000888">
                         9461000888
                     </a>
                 </p>
 
-                <p>
+                <p class="whatsapp-contact">
+                    <span class="whatsapp-icon">
+                        <svg viewBox="0 0 32 32" aria-hidden="true">
+                            <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.46 1.73 6.38L3.05 29l6.8-1.63A12.94 12.94 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.7c-2.02 0-4-.54-5.73-1.56l-.41-.24-4.04.97.99-3.94-.27-.42A10.67 10.67 0 1 1 16 26.7Zm5.86-7.99c-.32-.16-1.9-.94-2.2-1.05-.29-.11-.5-.16-.72.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.57-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.86.4-.29.32-1.13 1.1-1.13 2.69s1.16 3.12 1.32 3.34c.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
+                        </svg>
+                    </span>
                     WhatsApp:
                     <a href="https://wa.me/919461000888"
-                       target="_blank">
+                        target="_blank">
                         Chat with us
-                    </a>
-                </p>
-
-                <p>
-                    Website:
-                    <a href="https://mehtamart.com" target="_blank">
-                        mehtamart.com
                     </a>
                 </p>
             </div>
@@ -729,6 +850,8 @@
         </div>
 
     </section>
+
+
 
 
     <!-- Footer -->
