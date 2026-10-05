@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refurbished & Used | A1 Computers Sri Ganganagar</title>
+
+    <meta name="description"
+          content="A1 Computers Sri Ganganagar offers refurbished and used computers, laptops, printers and selected refurbished mobile phones, subject to availability.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 18px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e5e5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #123c69;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+            color: #174a70;
+            letter-spacing: 1px;
+            margin-left: 6px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #123c69;
+        }
+
+        .hero {
+            min-height: 500px;
+            padding: 140px 6% 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #123c69, #245f8f);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #e6eef5;
+            max-width: 720px;
+            margin: 0 auto 28px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 27px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-whatsapp {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            width: 185px;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #123c69;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #ffffff;
+        }
+
+        section {
+            padding: 65px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #123c69;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .cards {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            padding: 28px 24px;
+            background: #ffffff;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+
+        .card h3 {
+            color: #123c69;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        .highlight {
+            background: #f4f8fb;
+            text-align: center;
+        }
+
+        .highlight-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .highlight-content h2 {
+            color: #123c69;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .highlight-content p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .contact {
+            background: #ffffff;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #e2e2e2;
+            border-radius: 12px;
+            padding: 35px 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-box h3 {
+            color: #123c69;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .contact-box a {
+            color: #123c69;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            background: #25D366;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #123c69;
+            color: #ffffff;
+            text-align: center;
+            padding: 25px 6%;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 480px;
+                padding: 190px 6% 65px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .buttons {
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        A1 COMPUTERS
+        <span>Technology • Service • Solutions</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            REFURBISHED &amp; USED
+        </div>
+
+        <h1>
+            Smart Technology
+            <span>At Better Value</span>
+        </h1>
+
+        <p>
+            Refurbished and used technology products for customers
+            looking for practical and value-focused solutions.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#products" class="btn-primary">
+                Explore Products
+            </a>
+
+            <a href="https://wa.me/919461000888"
+               class="btn-whatsapp"
+               target="_blank">
+                WhatsApp Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>Refurbished &amp; Used Products</h2>
+
+        <p>
+            Selected products are available subject to condition and availability.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🖥️</div>
+
+            <h3>Refurbished Computers</h3>
+
+            <p>
+                Refurbished desktop computers from selected
+                brands for home, office and business use.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💻</div>
+
+            <h3>Refurbished Laptops</h3>
+
+            <p>
+                Selected refurbished and used laptops,
+                subject to availability.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🖨️</div>
+
+            <h3>Used &amp; Refurbished Printers</h3>
+
+            <p>
+                Selected used and refurbished printers
+                for practical printing requirements.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📱</div>
+
+            <h3>Refurbished Mobile Phones</h3>
+
+            <p>
+                Selected refurbished and used mobile phones,
+                subject to availability.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">♻️</div>
+
+            <h3>Used Desktops</h3>
+
+            <p>
+                Selected branded used desktop computers
+                for value-conscious customers.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔧</div>
+
+            <h3>Checked &amp; Serviced Equipment</h3>
+
+            <p>
+                Available used and refurbished equipment is
+                checked and serviced according to requirement.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="highlight">
+
+    <div class="highlight-content">
+
+        <h2>Value With Practical Support</h2>
+
+        <p>
+            A1 Computers has been serving customers since 1998.
+            Our experience helps us select and support practical
+            refurbished and used technology solutions for different requirements.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="contact">
+
+    <div class="section-title">
+
+        <h2>Looking for Refurbished or Used Equipment?</h2>
+
+        <p>
+            Contact A1 Computers to check current availability.
+        </p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <h3>
+            <a href="https://share.google/scSmjKs4TSYaMifyW"
+               target="_blank">
+                A1 Computers
+            </a>
+        </h3>
+
+        <p>
+            <a href="https://share.google/scSmjKs4TSYaMifyW"
+               target="_blank">
+                28–29, Adarsh Nagar,<br>
+                Radheyshyam Road,<br>
+                Sri Ganganagar, Rajasthan – 335001
+            </a>
+        </p>
+
+        <p>
+            Phone:
+            <a href="tel:+919461000888">
+                9461000888
+            </a>
+        </p>
+
+        <a href="https://wa.me/919461000888"
+           class="contact-button"
+           target="_blank">
+            WhatsApp for Enquiry
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 A1 Computers. All Rights Reserved.
+    </p>
+
+    <p>
+        A Proprietorship Business • Established in 1998
+    </p>
+
+</footer>
+
+
+<a class="whatsapp-float"
+   href="https://wa.me/919461000888"
+   target="_blank"
+   title="Chat on WhatsApp">
+    ☎
+</a>
+
+</body>
+</html>
