@@ -35,11 +35,16 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e5e5e5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: 800;
+            font-size: 28px;
+            font-weight: bold;
             color: #123c69;
         }
 
@@ -49,23 +54,23 @@
             font-weight: normal;
             color: #174a70;
             letter-spacing: 1px;
-            margin-left: 8px;
+            margin-left: 6px;
         }
 
         nav a {
             text-decoration: none;
-            color: #123c69;
-            margin-left: 22px;
+            color: #333;
+            margin-left: 25px;
             font-weight: 600;
         }
 
         nav a:hover {
-            color: #25D366;
+            color: #123c69;
         }
 
         .hero {
             min-height: 500px;
-            padding: 80px 6%;
+            padding: 140px 6% 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -303,7 +308,7 @@
 
             .hero {
                 min-height: 480px;
-                padding: 65px 6%;
+                padding: 190px 6% 65px;
             }
 
             .hero h1 {
