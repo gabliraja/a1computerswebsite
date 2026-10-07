@@ -344,6 +344,28 @@
             }
         }
 
+        .page-image {
+            max-width: 1000px;
+            margin: 35px auto 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .page-image img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+
+            .page-image img {
+                height: 240px;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -502,6 +524,10 @@
 
         </div>
 
+    </div>
+
+    <div class="page-image">
+        <img src="images/home-cinema.jpg" alt="A1 Computers Home Cinema">
     </div>
 
 </section>
